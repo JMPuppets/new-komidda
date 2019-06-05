@@ -1,15 +1,9 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
+const Discord = require('discord.js')
+const client = new Discord.Client()
 
 client.on('ready', () => {
-    console.log('I am ready!');
-});
-
-client.on('message', message => {
-    if (message.content === 'ping') {
-    	message.reply('pong');
-  	}
-});
+    console.log("Connected as " + client.user.tag)
+})
 
 client.on("message", (message) =>{
     if (message.content.startsWith("komaeda, ") {
@@ -25,6 +19,9 @@ client.on("message", (message) =>{
         message.content.send(pick);
     }
 });
+// Get your bot's secret token from:
+// https://discordapp.com/developers/applications/
+// Click on your application -> Bot -> Token -> "Click to Reveal Token"
+bot_secret_token = "NTg1NjMyMTgxNTA2OTMyNzM2.XPhJ6w.JdkH1R6RJzf3fOEPZd771sEb-k4"
 
-// THIS  MUST  BE  THIS  WAY
-client.login(process.env.BOT_TOKEN);
+client.login(BOT_TOKEN)
